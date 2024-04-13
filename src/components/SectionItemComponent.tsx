@@ -7,42 +7,45 @@ import AppButton from "./AppButton";
 
 
 interface PosterDescriptionComponentProps {
+    id: number;
     sectionTitle: string;
     sectionItems: Array<SectionItem>
 }
 
 
-const SectionItemComponent: React.FC<PosterDescriptionComponentProps> = ({sectionTitle, sectionItems}) => {
+const SectionItemComponent: React.FC<PosterDescriptionComponentProps> = ({sectionTitle, sectionItems, id}) => {
     return (
-        <>
-            <Text style={styles.premier}>
-                {sectionTitle}
-            </Text>
-            <ScrollView
-                horizontal={true}
-            >
-                {sectionItems.map((item, index) => {
-                    return (
-                        <View
-                            id={index + 1}
-                            style={styles.imageView}
-                        >
-                            <Image
-                                id={index}
-                                style={styles.image}
-                                source={item.image}
-                                contentFit="cover"
-                                transition={1000}
-                            />
-                            <Text style={styles.pilgrim}>{item.title}</Text>
-                            <Text style={styles.pilgrimDescription}>{item.description}</Text>
-                            <AppButton buttonText={Strings.ViewMore} onButtonClicked={() => {
-                            }}/>
-                        </View>
-                    )
-                })}
-            </ScrollView>
-        </>
+      <>
+          <Text style={styles.premier}>
+              {sectionTitle}
+          </Text>
+          <View>
+              <ScrollView
+                  horizontal={true} id={1123}
+              >
+                  {sectionItems.map((item, index) => {
+                      return (
+                          <View
+                              // id={index}
+                              style={styles.imageView}
+                          >
+                              <Image
+                                  id={index}
+                                  style={styles.image}
+                                  source={item.image}
+                                  contentFit="cover"
+                                  transition={1000}
+                              />
+                              <Text style={styles.pilgrim}>{item.title}</Text>
+                              <Text style={styles.pilgrimDescription}>{item.description}</Text>
+                              <AppButton buttonText={Strings.ViewMore} onButtonClicked={() => {
+                              }}/>
+                          </View>
+                      )
+                  })}
+              </ScrollView>
+          </View>
+      </>
     )
 }
 

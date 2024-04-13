@@ -46,7 +46,6 @@ export default function App() {
             <Tab.Navigator
                 initialRouteName={Screens.Home}
                 screenOptions={({route}) => ({
-
                     headerStyle: {
                         backgroundColor:ColorConstants.background,
                         borderColor: ColorConstants.background,
@@ -64,7 +63,6 @@ export default function App() {
                            <Image
                                style={styles.image}
                                source={appLogo}
-                               contentFit="fit"
                                transition={1000}
                            />
                        )

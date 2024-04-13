@@ -1,4 +1,4 @@
-import {Dimensions, ScrollView, StyleSheet} from "react-native";
+import {Dimensions, ScrollView, StyleSheet, View} from "react-native";
 import HeaderPagerComponent from "../../components/HeaderPagerComponent";
 import {ColorConstants, FontConstants, SizeConstants, Strings} from "../../constants/AppConstants";
 import React from "react";
@@ -6,9 +6,6 @@ import SectionItemComponent from "../../components/SectionItemComponent";
 import {SectionItem} from "../../@types";
 
 const pilgrimImage = require('../../../assets/images/pilgrim.png');
-// const badSeedImage = require('../../../assets/images/badSeed.png');
-// const badSeedImage = require('../../../assets/images/badseed.png');
-
 const gachetImage = require('../../../assets/images/gachet.png');
 const gentleManImage = require('../../../assets/images/gentlemen.png');
 
@@ -52,9 +49,9 @@ const adventureItems: Array<SectionItem> = [{
 export default function HomeScreen() {
     return (
         <ScrollView style={styles.container}>
-            <HeaderPagerComponent/>
-            <SectionItemComponent sectionItems={premierReleaseItems} sectionTitle={Strings.PremierRelease}/>
-            <SectionItemComponent sectionItems={adventureItems} sectionTitle={Strings.Adventure}/>
+            <HeaderPagerComponent />
+            <SectionItemComponent id={1} sectionItems={premierReleaseItems} sectionTitle={Strings.PremierRelease}/>
+            <SectionItemComponent id={2} sectionItems={adventureItems} sectionTitle={Strings.Adventure}/>
         </ScrollView>
     )
 }

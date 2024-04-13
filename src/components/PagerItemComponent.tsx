@@ -13,37 +13,35 @@ interface PagerItemComponentProps {
 
 const PagerItemComponent: React.FC<PagerItemComponentProps> = ({pagerItem}) => {
     return (
-        <>
-            <View style={styles.page} key={pagerItem.id}>
-                <Image
-                    style={styles.image}
-                    source={pagerItem.image}
-                    contentFit="cover"
-                    transition={1000}
-                />
-                <Text style={styles.header}>
-                    {pagerItem.title}
-                </Text>
-                <Text style={styles.description}>
-                    {pagerItem.description}
-                </Text>
-                <View
-                    style={styles.buttonRow}>
-                    <AppButton buttonText={Strings.ViewMore} onButtonClicked={() => {
-                        //show toast
-                    }}/>
-                    <View style={{
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    }}>
-                        <View style={styles.box}/>
-                        <View style={styles.box}/>
-                        <View style={styles.box}/>
-                    </View>
+        <View style={styles.page} key={pagerItem.id + 4}>
+            <Image
+                style={styles.image}
+                source={pagerItem.image}
+                contentFit="cover"
+                transition={1000}
+            />
+            <Text style={styles.header}>
+                {pagerItem.title}
+            </Text>
+            <Text style={styles.description}>
+                {pagerItem.description}
+            </Text>
+            <View
+                style={styles.buttonRow}>
+                <AppButton buttonText={Strings.ViewMore} onButtonClicked={() => {
+                    //show toast
+                }}/>
+                <View style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }}>
+                    <View style={styles.box}/>
+                    <View style={styles.box}/>
+                    <View style={styles.box}/>
                 </View>
             </View>
-        </>
+        </View>
     )
 }
 
@@ -52,7 +50,6 @@ const styles = StyleSheet.create({
     pager: {
         flex: 1,
         height: Dimensions.get('window').height * 0.65,
-        // backgroundColor: ColorConstants.backgroundLight
     },
     header: {
         padding: SizeConstants.paddingLarge,

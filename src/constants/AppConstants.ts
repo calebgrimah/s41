@@ -93,7 +93,7 @@ const Strings = {
   BadSeedDescription:
     "Step into Tudor Chambers. It’s got addiction, abuse, drugs, financial ruin...",
   Adventure: "Adventure",
-  GameForGentleMen: "A game\nfor Gentlemen",
+  GameForGentleMen: "A \ngame\nfor Gentlemen",
   GameForGentleMenDescription:
     "Step into Tudor Chambers. It’s got addiction, abuse, drugs, financial ruin...",
   Afterlive: "The Afterlives of Doctor Gachet",

@@ -9,19 +9,19 @@ export const headerImage = require('../../assets/images/placard.png');
 
 const pagerItems: Array<PagerItem> = [
     {
-        id: 1,
+        id: 11,
         image: headerImage,
         description: Strings.DanDareSeasonOneDescription,
         title: Strings.DanDareSeasonOne
     },
     {
-        id: 2,
+        id: 22,
         image: headerImage,
         description: Strings.DanDareSeasonOneDescription,
         title: Strings.DanDareSeasonOne
     },
     {
-        id: 3,
+        id: 33,
         image: headerImage,
         description: Strings.DanDareSeasonOneDescription,
         title: Strings.DanDareSeasonOne
@@ -31,17 +31,15 @@ const pagerItems: Array<PagerItem> = [
 
 export default function HeaderPagerComponent() {
     return (
-
-        <>
-            <PagerView style={styles.pager} initialPage={0}>
-                {pagerItems.map((item)=>{
-                    return (
-                        <PagerItemComponent pagerItem ={item}/>
-                    )
-                })}
-            </PagerView>
-        </>
-
+        <PagerView style={styles.pager} initialPage={0}>
+            {pagerItems.map((item) => {
+                return (
+                   <>
+                       <PagerItemComponent pagerItem={item}/>
+                   </>
+                )
+            })}
+        </PagerView>
     );
 }
 
@@ -49,6 +47,5 @@ const styles = StyleSheet.create({
     pager: {
         flex: 1,
         height: Dimensions.get('window').height * 0.65,
-        // backgroundColor: ColorConstants.backgroundLight
     },
 })
