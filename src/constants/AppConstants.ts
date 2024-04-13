@@ -6,8 +6,10 @@ const isDarkMode = Appearance.getColorScheme() === "dark";
 const FontConstants: {
   familyRegular: string;
   sizeTitle: number;
+  sizeHeader: number;
   sizeRegular: number;
   familySemiBold: string;
+  familyBold: string;
   weightBold:
     | "bold"
     | "normal"
@@ -23,9 +25,11 @@ const FontConstants: {
 } = {
   familyRegular: "Poppins-Regular",
   familySemiBold: "Poppins-SemiBold",
+  familyBold: "Poppins-Bold",
   sizeTitle: 18,
-  sizeRegular: 13,
+  sizeRegular: 14,
   weightBold: "bold",
+  sizeHeader: 24
 };
 
 const ColorConstants: {
@@ -51,6 +55,7 @@ const SizeConstants: {
   paddingRegular: number;
   paddingLarge: number;
   borderRadius: number;
+  borderRadiusButton: number;
   iconWidth: number;
   iconHeight: number;
 } = {
@@ -58,11 +63,13 @@ const SizeConstants: {
   paddingRegular: 8,
   paddingLarge: 16,
   borderRadius: 8,
+  borderRadiusButton: 5,
   iconHeight: 36,
   iconWidth: 32,
 };
 
 export const appLogo = require('../../assets/images/audioterra.png');
+
 
 
 
@@ -79,13 +86,14 @@ const Strings = {
     "Step into the future with Dan Dare. It’s got addiction, abuse, drugs, financial ruin...",
   ViewMore: "View more",
   Pilgrim: "Pilgrim",
+  PremierRelease: "Premier Release",
   PilgrimDescription:
     "Step into Tudor Chambers. It’s got addiction, abuse, drugs, financial ruin...",
   BadSeed: "Bad Seed",
   BadSeedDescription:
     "Step into Tudor Chambers. It’s got addiction, abuse, drugs, financial ruin...",
   Adventure: "Adventure",
-  GameForGentleMen: "A game for Gentlemen",
+  GameForGentleMen: "A game\nfor Gentlemen",
   GameForGentleMenDescription:
     "Step into Tudor Chambers. It’s got addiction, abuse, drugs, financial ruin...",
   Afterlive: "The Afterlives of Doctor Gachet",

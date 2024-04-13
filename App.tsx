@@ -41,19 +41,23 @@ export default function App() {
     }
 
     return (
-        <NavigationContainer onReady={onLayoutRootView}>
-            {/*<Text style={{ fontFamily: "Poppins-Bold" }}>*/}
-            {/*Open up App.tsx to start working on your app!*/}
-            {/*</Text>*/}
+        <NavigationContainer
+            onReady={onLayoutRootView} >
             <Tab.Navigator
                 initialRouteName={Screens.Home}
-
                 screenOptions={({route}) => ({
+
                     headerStyle: {
-                        backgroundColor:ColorConstants.background
+                        backgroundColor:ColorConstants.background,
+                        borderColor: ColorConstants.background,
+                        borderTopWidth: 0,
+                        borderBottomWidth : 0,
+                        shadowOpacity: 0,
                     },
                     tabBarStyle: {
-                        backgroundColor: ColorConstants.background
+                        backgroundColor: ColorConstants.background,
+                        borderTopWidth: 0,
+                        paddingTop: SizeConstants.paddingLarge,
                     },
                     headerTitle: () => {
                        return (
@@ -103,6 +107,7 @@ export default function App() {
                             icon
                         );
                     },
+
                 })}
             >
                 <Tab.Screen

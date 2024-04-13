@@ -4,3 +4,14 @@ export interface IconProps {
     height: number;
     text: string;
 }
+export interface SectionItem {
+    title:string;
+    description: string;
+    image: string;
+}
+export interface PagerItem {
+    title:string;
+    description: string;
+    image: string;
+    id: number;
+}
